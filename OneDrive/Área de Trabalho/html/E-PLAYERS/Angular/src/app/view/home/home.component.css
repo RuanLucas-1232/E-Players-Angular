@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p{
+    margin: 0 auto;
+    position: relative;
+    top: 31vh;
+    font-weight: bold;
+    font-size: 15vw;
+    text-align: center;
+    animation: identifier 6s infinite;
+}
+
+@keyframes identifier {
+    25%{
+        color: red;
+    }    
+    50%{
+        color: green;
+    }
+    100%{
+        color: blue;
+    }
+}
