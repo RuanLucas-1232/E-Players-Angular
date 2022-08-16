@@ -12,4 +12,4 @@ dicas:
 
 ng new my-first-project
 cd my-first-project
-ng serve (inicializar servidor)
+ng serve (inicializar servidor).
