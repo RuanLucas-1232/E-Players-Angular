@@ -1,0 +1,1 @@
+A pasta assets é destinada a guardar arquivos externos ao projeto do angular, como: imagens, fonts, vídeos etc.

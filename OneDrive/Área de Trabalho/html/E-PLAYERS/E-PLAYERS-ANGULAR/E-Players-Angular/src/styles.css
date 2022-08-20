@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Roboto-Regular';
+    /*nomeia a font*/
+    src: url(/assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Titilium-Web';
+    src: url(/assets/fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url(/assets/fonts/Roboto/Roboto-Medium.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 0;
+}
+
+body{
+    color: white;
+    font-family: Roboto-Regular;
+}
