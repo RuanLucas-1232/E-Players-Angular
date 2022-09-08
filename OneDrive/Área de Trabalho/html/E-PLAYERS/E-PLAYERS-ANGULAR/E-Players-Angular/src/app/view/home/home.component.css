@@ -1,62 +1,8 @@
-/* Container geral */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    /* border: 1px solid red; */
 }
 
-/* Cabeçalho */
-.header-flex {
-    display: flex;
-    height: 85px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Logo da página */
-header .logo {
-    width: 260px;
-}
-
-/* Menu */
-header .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 52%;
-    height: 100%;
-}
-
-header {
-    background-color: #1A1A1A;
-}
-
-/* Links do menu */
-header nav a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: Roboto-Regular;
-
-}
-
-header nav a:hover {
-    color: #C91919;
-}
-
-/* Corpo da página */
-
-body div header {
-    background-color: black;
-    max-width: 1200px;
-}
-
-/* .banner{
-    height: 610px;
-    background-image: url(../images/banner_pilotos.png);
-} */
-
-/* Banner */
 .carousel-item img {
     height: 610px;
 }
@@ -66,8 +12,6 @@ body div header {
     justify-content: end;
     height: 610px;
     align-items: center;
-    /* max-width: 1200px;
-    margin: 0 auto; */
 }
 
 .banner .banner-info {
@@ -185,15 +129,6 @@ body div header {
     width: 100%;
 }
 
-/* Roda-pé */
-footer {
-    background-color: #000000;
-}
-
-footer p {
-    color: white;
-}
-
 main .descricao {
     display: flex;
 
@@ -204,228 +139,16 @@ main .descricao {
 
 main .descricao p {
     color: white;
-    font-size: 3vh;
+    font-size: calc(2vh *1.2);
     position: relative;
     top: 133px;
-    left: 99px;
-    width: 55rem;
-    height: 14rem;
-    margin: 0;
+    width: 41rem;
+    height: 18rem;
+    margin: 0 auto;
 }
 
 main .descricao img {
     position: relative;
-    left: 160px;
+    left: -239px;
     width: 27rem;
-}
-
-/* Breakpoints
-
-    celulares 0 - 767px -> telas pequenas
-    tablets 767px - 991px -> telas médias
-    desktop 992px - 1199px -> telas moderadamente grandes
-    telas largas 1200px - 1920px -> telas grandes
-
-*/
-
-/* Medias */
-@media (max-width: 320px) {
-    .header-flex {
-        height: 80px;
-    }
-
-    .patrocinados-flex img {
-        width: 20%;
-    }
-
-    .banner {
-        height: 610px;
-        background-position: 164% 0;
-        background-size: 63rem 39rem;
-        width: 100%;
-    }
-
-    .banner-info h1 {
-        color: white;
-        text-decoration: none;
-        font-family: Titilium-Web;
-        font-size: 330%;
-    }
-
-    header .logo {
-        width: 60% !important;
-    }
-}
-
-@media (max-width: 363px) {
-    .banner-info h1 {
-        font-size: 52px;
-    }
-
-    .banner-info p {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 580px) {
-    main .descricao {
-        display: none !important;
-    }
-}
-
-@media (max-width: 767px) {
-
-    .header-flex .logo {
-        width: 200px;
-    }
-
-    .menu a {
-        border-left: white 4px dotted !important;
-        padding: 13px !important;
-        margin-bottom: 15px;
-    }
-
-    .d-none {
-        display: block !important;
-    }
-
-    .banner .banner-info-box {
-        display: flex;
-        justify-content: center;
-        height: 610px;
-        align-items: center;
-    }
-
-    .banner {
-        background-position: 13%;
-    }
-
-    .menu-bars {
-        width: 30px !important;
-    }
-}
-
-@media (max-width: 920px) {
-    .patrocinados-flex img {
-        width: 15%;
-    }
-
-    .header-flex .menu {
-        width: 55%;
-    }
-}
-
-/* @media (min-width: 921px) {
-    .header-flex .menu {
-        width: 55%;
-    }
-} */
-
-@media (max-width: 991px) {
-
-    .container,
-    .containner-grid {
-        max-width: 980px;
-    }
-
-    .patrocinados {
-        display: none;
-    }
-
-
-    .header-flex .menu {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 81%;
-        height: 100%;
-        z-index: 10;
-
-        background-color: #1A1A1A;
-
-        flex-direction: column;
-        justify-content: center;
-        align-items: stretch;
-        padding: 20px 50px;
-
-        /* rgba(26, 26, 26,.8) o último parâmetro é a transparecia: vai de 0 - 1*/
-        background-color: rgba(201, 25, 25, .95);
-        border-radius: 0 50px 0 90px;
-
-        left: -80%;
-        opacity: 0;
-        /*Transparencia. Varia de 0 - 1*/
-
-        /*Aqui secoloca as propriedades que mudam de valor em algum momento.
-        O left é alterado pela class menu-chamado e é essa alteração que é controlada*/
-        transition: left 500ms, opacity 500ms;
-    }
-
-    .menu-chamado {
-        left: 0 !important;
-        opacity: 1 !important;
-    }
-
-    .menu a {
-        border-left: white 4px dotted;
-        font-size: 1.4rem;
-        padding: 20px;
-        margin-bottom: 15px;
-    }
-
-    .menu a:hover {
-        background-color: #560505;
-        color: white;
-        border-left: none !important;
-        border-radius: 4px;
-    }
-
-    .menu-bars {
-        display: block;
-        width: 40px;
-        margin-right: 15px;
-    }
-
-    main .descricao p {
-        color: white;
-        font-size: 2vh;
-        position: relative;
-        top: 101px;
-        left: 1px;
-        width: 565px;
-        height: 275px;
-        margin: 0 auto;
-    }
-
-    main .descricao {
-        display: flex;
-        background: url(/assets/images/fundo-sobre.png);
-        background-repeat: round;
-        height: 50vh;
-    }
-
-}
-
-
-@media (min-width: 992px) {
-    #menu-ativo {
-        display: none;
-    }
-}
-
-@media (max-width: 1199px) {
-    .container {
-        max-width: 980px !important;
-    }
-
-    .header-flex nav.menu a {
-        font-size: 16px;
-    }
-
-}
-
-@media (max-width:1520px) {
-    main .descricao img {
-        display: none;
-    }
 }

@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3A404E;
+    color: white;
+    font-family: Roboto-Regular;
+}
+
+.container{
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    position: relative;
+    top: 19vh;
+}
+
+.titulo{
+    margin-bottom: 60px;
+}
+
+.voltar{
+    margin-bottom: 100px;
+}
+
+.linha{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(141, 141, 141);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+/* Seleciona o primeiro componente com a class linha */
+.linha:first-of-type{
+    border-bottom: 1px solid #a0824d;
+}
+
+.linha input {
+    height: 40px;
+    width: 90%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ababab;
+    font-size: 1.5rem;
+}
+
+.linha input::placeholder{
+    color: #ababab;
+    font-size: 1.5rem;
+}
+
+.mensagem{
+    text-align: center;
+    color: #c67187;
+    font-size: 17px;
+    height: 20px;
+}
+
+.entrar{
+    display: block;
+    width: 80%;
+    margin: 25px auto 0;
+    background: #21242e;
+    color: white;
+    padding: 20px;
+    border: 1px #21242e;
+    border-radius: 25PX;
+    font-size: 1.2rem;
+    font-family: Roboto-Regular;
+    box-shadow: 0px 0px 22px 6px rgba(38, 43, 58,  .5);
+}
+
+form .link{
+    display: block;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+}

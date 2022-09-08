@@ -1,0 +1,31 @@
+<!-- <p>22</p> por padrão aparece na cor branca-->
+<div class="container">
+    <a RouterLink="/home">
+        <fa-icon [icon]="faArrowLeft" class="voltar"></fa-icon>
+    </a>
+
+    <h1 class="titulo">Login</h1>
+
+    <form (ngSubmit)="capturarDados()">
+        <div class="linha">
+            <fa-icon [icon]="faUser"></fa-icon>
+            <input id="usuario" placeholder="insira seu nome" type="text" name="usuario" [(ngModel)]="userModel.nome">
+        </div>
+
+        <div class="linha">
+            <fa-icon [icon]="faEnvelope"></fa-icon>
+            <input id="email" placeholder="insira seu email" type="email" name="email" [(ngModel)]="userModel.email">
+        </div>
+        
+        <div class="linha">
+            <fa-icon [icon]="faLock"></fa-icon>
+            <input id="senha" placeholder="**********" type="password" name="senha" [(ngModel)]="userModel.senha">
+        </div>
+
+        <p class="mensagem"></p>
+
+        <button class="entrar" >Entrar</button><br>
+
+        <a class="link" href="./Cadastro.html">Cadastre-se</a>
+    </form>
+</div>

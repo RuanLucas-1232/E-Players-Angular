@@ -15,17 +15,141 @@
     src: url(/assets/fonts/Roboto/Roboto-Medium.ttf);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     height: 0;
 }
 
-body{
+body {
+    background: #3A404E;
     color: white;
     font-family: Roboto-Regular;
+}
+
+
+/* Medias */
+@media (max-width: 320px) {
+    .header-flex {
+        height: 80px;
+    }
+
+    .patrocinados-flex img {
+        width: 20%;
+    }
+
+    .banner {
+        height: 610px;
+        background-position: 164% 0;
+        background-size: 63rem 39rem;
+        width: 100%;
+    }
+
+    .banner-info h1 {
+        color: white;
+        text-decoration: none;
+        font-family: Titilium-Web;
+        font-size: 330%;
+    }
+
+    header .logo {
+        width: 60% !important;
+    }
+}
+
+@media (max-width: 363px) {
+    .banner-info h1 {
+        font-size: 52px;
+    }
+
+    .banner-info p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 636px) {
+    main .descricao p {
+        color: white;
+        font-size: calc(2vh *1.1) !important;
+        position: relative;
+        top: 133px;
+        width: 40rem;
+        height: 14rem;
+        margin: 0 auto;
+    }    
+}
+
+@media (max-width: 580px) {
+    main .descricao {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .header-flex .logo {
+        width: 200px;
+    }
+
+    .menu a {
+        border-left: white 4px dotted !important;
+        padding: 13px !important;
+        margin-bottom: 15px;
+    }
+
+    .d-none {
+        display: block !important;
+    }
+
+    .banner .banner-info-box {
+        display: flex;
+        justify-content: center;
+        height: 610px;
+        align-items: center;
+    }
+
+    .banner {
+        background-position: 13%;
+    }
+
+    .menu-bars {
+        width: 30px !important;
+    }
+}
+
+@media (max-width: 920px) {
+    .patrocinados-flex img {
+        width: 15%;
+    }
+
+    .header-flex .menu {
+        width: 55%;
+    }
+}
+
+@media (min-width: 992px) {
+    #menu-ativo {
+        display: none;
+    }
+}
+
+@media (max-width: 1199px) {
+    .container {
+        max-width: 980px !important;
+    }
+
+    .header-flex nav.menu a {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width:1520px) {
+    main .descricao img {
+        display: none;
+    }
 }
