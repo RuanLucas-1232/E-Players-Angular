@@ -9,8 +9,10 @@ import { HeaderComponent } from './view/header/header.component';
 import { FooterComponent } from './view/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
-
+import {HttpClientModule} from "@angular/common/http"
+//Primeiro importa
 @NgModule({
+  //depois declara
   declarations: [
     AppComponent,
     HomeComponent,
@@ -22,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

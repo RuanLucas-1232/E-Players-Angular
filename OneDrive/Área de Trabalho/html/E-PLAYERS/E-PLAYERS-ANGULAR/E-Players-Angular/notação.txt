@@ -1,1 +1,19 @@
 A pasta assets é destinada a guardar arquivos externos ao projeto do angular, como: imagens, fonts, vídeos etc.
+
+//cria class user
+ng g class services/user
+
+//cria componente user
+ng g c services/user
+
+//cria modelo user
+ng g model services/user
+
+//Para cada view tem um service e um model
+ng g service services/user
+
+1)importar modulo http e declarar na app.module
+2)criar o service
+3)criar a variável httpClient no constructor da view
+4)criar uma variável url na view
+5)criar função e chamar método http (get, post, put ou delete)

@@ -6,10 +6,10 @@
 
     <h1 class="titulo">Login</h1>
 
-    <form (ngSubmit)="capturarDados()">
+    <form (ngSubmit)="signinLocal()">
         <div class="linha">
             <fa-icon [icon]="faUser"></fa-icon>
-            <input id="usuario" placeholder="insira seu nome" type="text" name="usuario" [(ngModel)]="userModel.nome">
+            <input id="usuario" placeholder="insira seu nome" type="text" name="usuario" [(ngModel)]="userModel.name">
         </div>
 
         <div class="linha">
@@ -19,7 +19,7 @@
         
         <div class="linha">
             <fa-icon [icon]="faLock"></fa-icon>
-            <input id="senha" placeholder="**********" type="password" name="senha" [(ngModel)]="userModel.senha">
+            <input id="senha" placeholder="**********" type="password" name="senha" [(ngModel)]="userModel.password">
         </div>
 
         <p class="mensagem"></p>
