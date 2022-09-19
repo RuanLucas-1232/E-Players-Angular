@@ -14,19 +14,49 @@ export class LoginComponent implements OnInit {
   faArrowLeft = faArrowLeft;
   faEnvelope = faEnvelope;
   faLock = faLock;
-  
+
   userModel = new User()
-  
+
+  mensagem: any
+
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
   }
-  signinLocal(){
-    // console.log(this.userModel); dá o objeto genérico
-    console.log(this.userModel);
-    this.userService.sigin(this.userModel).subscribe(function(response){
-      console.log(response);
-    })   
+
+  validaLogin():boolean{
+    if (this.userModel.name === undefined || this.userModel.email === undefined || this.userModel.password === undefined || this.userModel.name === '' || this.userModel.email === '' || this.userModel.password === '') {
+      this.mensagem = 'Por favor, preencha todos os campos corretamente!'
+      return false
+    }
+    else{
+      return true
+    }
+  }
+
+  signinLocal() {
+    if (this.validaLogin()) {
+      this.mensagem = 'Por favor, preencha todos os campos corretamente!'
+
+    } else {
+      // console.log(this.userModel); dá o objeto genérico
+      console.log(this.userModel);
+      this.userService.sigin(this.userModel).subscribe(
+        //O objeto é usado na documentação do rxjs para o subscribe()
+        {
+          next: (response) => {
+            //arrow function fica como uma função global da classe
+            console.log(response);
+            this.mensagem = "Logado com Sucesso!"
+          },
+          error: (err) => {
+            // console.log(err);
+
+            this.mensagem = `${err.error} ${err.status} ${err.statusText}`
+          }
+        }
+      )
+    }
   }
 
 }
